@@ -1,0 +1,36 @@
+body {
+    background-color: royalblue;
+}
+
+.text-white {
+    color: white;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #004085;
+    }
+
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 1rem;
+    }

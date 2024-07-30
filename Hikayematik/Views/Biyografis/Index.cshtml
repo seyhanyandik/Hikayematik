@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Hikayematik.Models.Biyografi>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Ad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dogum_tarihi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.olum_tarihi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Meslek)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.biyografi)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dogum_tarihi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.olum_tarihi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Meslek)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.biyografi)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,14 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hikayematik</title>
+    <link rel="stylesheet" type="text/css" href="~/Home/css/styles.css" />
+</head>
+<body>
+   @RenderBody() 
+    <script src="~/Home/js/script.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
