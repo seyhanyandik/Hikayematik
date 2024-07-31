@@ -43,6 +43,7 @@ namespace Hikayematik.Controllers
             }
 
             return View(biyografi);
+   
         }
 
         // GET: Biyografis/Create
@@ -56,15 +57,15 @@ namespace Hikayematik.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Ad,dogum_tarihi,olum_tarihi,Meslek,biyografi")] Biyografi biyografi)
+        public async Task<IActionResult> Create([Bind("Id,Ad,dogum_tarihi,olum_tarihi,Meslek,biyografi")] Biyografi gelen)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(biyografi);
+                _context.Add(gelen);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(biyografi);
+            return View();
         }
 
         // GET: Biyografis/Edit/5
@@ -88,9 +89,9 @@ namespace Hikayematik.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Ad,dogum_tarihi,olum_tarihi,Meslek,biyografi")] Biyografi biyografi)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Ad,dogum_tarihi,olum_tarihi,Meslek,biyografi")] Biyografi biografi)
         {
-            if (id != biyografi.Id)
+            if (id != biografi.Id)
             {
                 return NotFound();
             }
@@ -99,12 +100,12 @@ namespace Hikayematik.Controllers
             {
                 try
                 {
-                    _context.Update(biyografi);
+                    _context.Update(biografi);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!BiyografiExists(biyografi.Id))
+                    if (!BiyografiExists(biografi.Id))
                     {
                         return NotFound();
                     }
@@ -115,7 +116,7 @@ namespace Hikayematik.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(biyografi);
+            return View(biografi);
         }
 
         // GET: Biyografis/Delete/5

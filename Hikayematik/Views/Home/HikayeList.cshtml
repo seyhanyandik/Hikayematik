@@ -1,36 +1,42 @@
-﻿@model dynamic
+﻿@model IEnumerable<dynamic>
 @{
     var modelName = ViewBag.ModelName;
-}
-@{
-    ViewData["Title"] = "ModelDetail";
-    Layout = "~/Views/Shared/_homeLayout.cshtml";
 }
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@Model.Baslik Detay</title>
+    <title>@modelName Listesi</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body style="background-color: royalblue;">
-    
     <div class="container mt-5">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">@Model.Baslik</h5>
-                <p class="card-text">@Model.Icerik</p>
-                <p class="card-text"><small class="text-muted">Yayınlanma Tarihi: @Model.CreatedDate.ToShortDateString()</small></p>
-            </div>
-        </div>
+        <h1 class="text-center mb-4 text-white">Hikaye Listesi</h1>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Başlık</th>
+                    <th>İşlem</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Baslik</td>
+                        <td><a asp-action="HikayeDetail" asp-route-modelName="@modelName" asp-route-id="@item.Id" class="btn btn-primary">Detay</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js."></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+
 </body>
 </html>
-

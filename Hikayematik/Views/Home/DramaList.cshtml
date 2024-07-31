@@ -2,12 +2,6 @@
 @{
     var modelName = ViewBag.ModelName;
 }
-
-@{
-    ViewData["Title"] = "ModelList";
-    Layout = "~/Views/Shared/_homeLayout.cshtml";
-}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +13,7 @@
 </head>
 <body style="background-color: royalblue;">
     <div class="container mt-5">
-        <h1 class="text-center mb-4 text-white">@modelName Listesi</h1>
+        <h1 class="text-center mb-4 text-white">Drama Listesi</h1>
         <table class="table table-bordered table-hover">
             <thead>
                 <tr>
@@ -32,7 +26,7 @@
                 {
                     <tr>
                         <td>@item.Baslik</td>
-                        <td><a asp-action="ModelDetail" asp-route-modelName="@modelName" asp-route-id="@item.Id" class="btn btn-primary">Detay</a></td>
+                        <td><a asp-action="DramaDetail" asp-route-modelName="@modelName" asp-route-id="@item.Id" class="btn btn-primary">Detay</a></td>
                     </tr>
                 }
             </tbody>
@@ -42,7 +36,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js."></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  
+
 
 </body>
 </html>
