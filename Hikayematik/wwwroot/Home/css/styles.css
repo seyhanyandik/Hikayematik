@@ -1,23 +1,29 @@
 body {
     background-color: royalblue;
-}
-
-.text-white {
     color: white;
 }
 
 .card {
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+    transition: transform 0.2s;
+    background-color: #fff;
+    color: #000;
 }
 
     .card:hover {
-        transform: translateY(-5px);
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
 .card-title {
-    font-size: 1.5rem;
-    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
 }
 
 .btn-primary {
@@ -25,10 +31,10 @@ body {
     border-color: #007bff;
 }
 
-    .btn-primary:hover {
+.btn-primary:hover {
         background-color: #0056b3;
         border-color: #004085;
-    }
+}
 
 @media (max-width: 768px) {
     .card {

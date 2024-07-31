@@ -8,95 +8,95 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="~/Home/css/styles.css">
 </head>
-<body>
+<body style="background-color: royalblue;">
     <div class="container mt-5">
-        <h1 class="text-center mb-4">Hikayematik</h1>
+        <h1 class="text-center mb-4 text-white">Hikayematik</h1>
         <div class="row">
             <div class="col-md-6 mb-4">
-                <div class="card clickable-card" data-url="ani-sohbet.html">
+                <div class="card clickable-card" data-url="AniSohbet">
                     <div class="card-body">
                         <h5 class="card-title"><i class="fa-solid fa-comments"></i> Anı Sohbet</h5>
                         <p class="card-text">Anı ve Sohbetler hakkında bilgiler.</p>
-                        <a href="ani-sohbet.html" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Göz At</a>
+                        <a asp-controller="Home" asp-action="ModelList" asp-route-modelName="AniSohbet" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Göz At</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 mb-4">
-                <div class="card clickable-card" data-url="biyografi.html">
+                <div class="card clickable-card" data-url="Biyografi">
                     <div class="card-body">
-                        <h5 class="card-title"><i class="fa-sharp fa-solid fa-person"></i>Biyografi</h5>
+                        <h5 class="card-title"><i class="fa-sharp fa-solid fa-person"></i> Biyografi</h5>
                         <p class="card-text">Biyografiler hakkında bilgiler.</p>
-                        <a href="biyografi.html" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Göz At</a>
+                        <a asp-controller="Home" asp-action="ModelList" asp-route-modelName="Biyografi" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Göz At</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 mb-4">
-                <div class="card clickable-card" data-url="deyim-hikaye.html">
+                <div class="card clickable-card" data-url="DeyimHikaye">
                     <div class="card-body">
-                        <h5 class="card-title"><i class="fa-light fa-face-dotted"></i>Deyim Hikaye</h5>
+                        <h5 class="card-title"><i class="fa-light fa-face-dotted"></i> Deyim Hikaye</h5>
                         <p class="card-text">Deyim ve Hikayeler hakkında bilgiler.</p>
-                        <a href="deyim-hikaye.html" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Göz At</a>
+                        <a asp-controller="Home" asp-action="ModelList" asp-route-modelName="DeyimHikaye" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Göz At</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 mb-4">
-                <div class="card clickable-card" data-url="drama.html">
+                <div class="card clickable-card" data-url="Drama">
                     <div class="card-body">
-                        <h5 class="card-title"><i class="fa-sharp fa-solid fa-masks-theater"></i>Drama</h5>
+                        <h5 class="card-title"><i class="fa-sharp fa-solid fa-masks-theater"></i> Drama</h5>
                         <p class="card-text">Dramalar hakkında bilgiler.</p>
-                        <a href="drama.html" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Göz At</a>
+                        <a asp-controller="Home" asp-action="ModelList" asp-route-modelName="Drama" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Göz At</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 mb-4">
-                <div class="card clickable-card" data-url="hikaye.html">
+                <div class="card clickable-card" data-url="Hikaye">
                     <div class="card-body">
-                        <h5 class="card-title"><i class="fa-solid fa-book"></i>Hikaye</h5>
+                        <h5 class="card-title"><i class="fa-solid fa-book"></i> Hikaye</h5>
                         <p class="card-text">Hikayeler hakkında bilgiler.</p>
-                        <a href="hikaye.html" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Göz At</a>
+                        <a asp-controller="Home" asp-action="ModelList" asp-route-modelName="Hikaye" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Göz At</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 mb-4">
-                <div class="card clickable-card" data-url="masal.html">
+                <div class="card clickable-card" data-url="Masal">
                     <div class="card-body">
-                        <h5 class="card-title"><i class="fa-sharp-duotone fa-solid fa-books"></i>Masal</h5>
+                        <h5 class="card-title"><i class="fa-sharp-duotone fa-solid fa-books"></i> Masal</h5>
                         <p class="card-text">Masallar hakkında bilgiler.</p>
-                        <a href="masal.html" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Göz At</a>
+                        <a asp-controller="Home" asp-action="ModelList" asp-route-modelName="Masal" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Göz At</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 mb-4">
-                <div class="card clickable-card" data-url="pratik-bilgiler.html">
+                <div class="card clickable-card" data-url="PratikBilgiler">
                     <div class="card-body">
-                        <h5 class="card-title"><i class="fa-sharp fa-solid fa-circle-info"></i>Pratik Bilgiler</h5>
+                        <h5 class="card-title"><i class="fa-sharp fa-solid fa-circle-info"></i> Pratik Bilgiler</h5>
                         <p class="card-text">Pratik Bilgiler hakkında bilgiler.</p>
-                        <a href="pratik-bilgiler.html" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Göz At</a>
+                        <a asp-controller="Home" asp-action="ModelList" asp-route-modelName="PratikBilgiler" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Göz At</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 mb-4">
-                <div class="card clickable-card" data-url="siir.html">
+                <div class="card clickable-card" data-url="Siir">
                     <div class="card-body">
-                        <h5 class="card-title"><i class="fa-duotone fa-solid fa-scroll"></i>Şiir</h5>
+                        <h5 class="card-title"><i class="fa-duotone fa-solid fa-scroll"></i> Şiir</h5>
                         <p class="card-text">Şiirler hakkında bilgiler.</p>
-                        <a href="siir.html" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Göz At</a>
+                        <a asp-controller="Home" asp-action="ModelList" asp-route-modelName="Siir" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Göz At</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 mb-4">
-                <div class="card clickable-card" data-url="tarihi-yerler.html">
+                <div class="card clickable-card" data-url="TarihiYerler">
                     <div class="card-body">
-                        <h5 class="card-title"><i class="fa-sharp fa-solid fa-earth-americas"></i>Tarihi Yerler</h5>
+                        <h5 class="card-title"><i class="fa-sharp fa-solid fa-earth-americas"></i> Tarihi Yerler</h5>
                         <p class="card-text">Tarihi Yerler hakkında bilgiler.</p>
-                        <a href="tarihi-yerler.html" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Göz At</a>
+                        <a asp-controller="Home" asp-action="ModelList" asp-route-modelName="TarihiYerler" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Göz At</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js."></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="~/Home/js/script.js"></script>
 

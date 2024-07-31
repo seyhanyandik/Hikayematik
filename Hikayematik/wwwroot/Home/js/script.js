@@ -1,9 +1,6 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-    const cards = document.querySelectorAll('.clickable-card');
-    cards.forEach(card => {
-        card.addEventListener('click', () => {
-            const url = card.getAttribute('data-url');
-            window.location.href = url;
-        });
+$(document).ready(function () {
+    $('.clickable-card').on('click', function () {
+        var url = $(this).data('url');
+        window.location.href = url;
     });
 });
