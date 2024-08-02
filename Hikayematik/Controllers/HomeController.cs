@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
+
 namespace Hikayematik.Controllers
 {
     public class HomeController : Controller
@@ -170,12 +171,12 @@ namespace Hikayematik.Controllers
         }
         public IActionResult HikayeDetail(string modelName, int id){
 
-            if (modelName == "Hikaye")
+            var hikaye = _context.hikaye.FirstOrDefault(h => h.Id == id);
+            if (hikaye == null)
             {
-                var item = _context.hikaye.Find(id);
-                return View(item);
+                return NotFound();
             }
-            return NotFound();
+            return View(hikaye);
         }
 
         public IActionResult MasalDetail(string modelName, int id){
@@ -216,6 +217,7 @@ namespace Hikayematik.Controllers
             }
             return NotFound();
         }
+
         public IActionResult Privacy()
         {
             return View();

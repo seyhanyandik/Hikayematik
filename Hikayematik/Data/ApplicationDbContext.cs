@@ -1,9 +1,10 @@
 ﻿using Hikayematik.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Hikayematik.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext<AppUser, AppRole, int>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
@@ -28,12 +29,6 @@ namespace Hikayematik.Data
         public DbSet<Pratik_Bilgiler>? pratik_bilgiler { get; set; }
 
         public DbSet<Tarihi_Yerler>? tarihi_yerler { get; set; }
-
-
-
-
-
-
 
 
     }
