@@ -3,6 +3,20 @@ body {
     color: white;
 }
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-nav {
+    flex-direction: row;
+}
+
+.nav-item {
+    margin-left: 10px;
+}
+
 .card {
     transition: transform 0.2s;
     background-color: #fff;

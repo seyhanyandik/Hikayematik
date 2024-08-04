@@ -7,8 +7,17 @@
     <link rel="stylesheet" type="text/css" href="~/Home/css/styles.css" />
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">Anasayfa</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <partial name="_LoginPartial" />
+    </div>
+    </nav>
     @RenderBody()
     <script src="~/Home/js/script.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+<footer>
+    <p>© @DateTime.Now.Year - My ASP.NET Application</p>
+</footer>
 </html>
