@@ -5,7 +5,7 @@ namespace Hikayematikwebapi.Data
 {
     public class ApplicationDbContext : DbContext
     {
-        protected ApplicationDbContext(DbContextOptions<ApplicationDbContext> 
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> 
             options):base(options)
         {
         }
