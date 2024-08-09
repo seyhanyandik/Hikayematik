@@ -107,7 +107,7 @@ namespace Hikayematik.Controllers
             return NotFound();
 
         }
-
+        
         public IActionResult SiirList(string modelName)
         {
             if (modelName == "Siir")
